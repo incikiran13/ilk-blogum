@@ -17,5 +17,7 @@ class Post(models.Model):
 
     def __str__(self):
         return self.baslik
+from django.shortcuts import render
+from .models import Post
 
 # Create your models here.

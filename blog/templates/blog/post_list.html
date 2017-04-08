@@ -3,7 +3,16 @@
         <title>İnci'in blogu</title>
     </head>
     <body bgcolor="skyblue">
-        <h1>Merhaba!</h1>
-        <h2>Çalışıyor!</h2>
+      <div>
+   <h1><a href="/">Django Girls Blog</a></h1>
+</div>
+
+{% for post in posts %}
+  <div>
+      <p>published: {{ post.yayinlanma_tarihi }}</p>
+      <h1><a href="">{{ post.baslik }}</a></h1>
+      <p>{{ post.yazi|linebreaks }}</p>
+  </div>
+{% endfor %}
     </body>
 </html>
